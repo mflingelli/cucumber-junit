@@ -8,6 +8,27 @@
     <artifactId>cucumber-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <name>Markus Flingelli</name>
+            <email>markus.flingelli@gmx.de</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>scm:git@github.com:mflingelli/cucumber-junit.git</url>
+        <connection>scm:git@github.com:mflingelli/cucumber-junit.git</connection>
+        <developerConnection>scm:git@github.com:mflingelli/cucumber-junit.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/mflingelli/cucumber-junit/issues</url>
+    </issueManagement>
+
+    <url>https://github.com/mflingelli/cucumber-junit</url>
+
     <build>
         <plugins>
             <plugin>
