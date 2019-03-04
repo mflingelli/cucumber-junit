@@ -67,7 +67,7 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>3.5.0</version>
+                <version>4.4.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
@@ -77,8 +77,10 @@
                         </goals>
                         <configuration>
                             <projectName>cucumber</projectName>
-                            <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber-report.json</cucumberOutput>
+                            <outputDirectory>${project.build.directory}/</outputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
                         </configuration>
                     </execution>
                 </executions>
@@ -88,15 +90,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
+            <version>4.2.4</version>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
+            <version>4.2.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
