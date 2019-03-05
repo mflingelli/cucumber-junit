@@ -7,24 +7,16 @@
 You have to add the following Maven dependencies:
 
 ```
- <dependency>
-  <groupId>info.cukes</groupId>
+<dependency>
+  <groupId>io.cucumber</groupId>
   <artifactId>cucumber-java</artifactId>
-  <version>1.2.5</version>
-  <scope>test</scope>
+  <version>4.2.4</version>
 </dependency>
-        
+  
 <dependency>
-  <groupId>info.cukes</groupId>
+  <groupId>io.cucumber</groupId>
   <artifactId>cucumber-junit</artifactId>
-  <version>1.2.5</version>
-  <scope>test</scope>
-</dependency>
-        
-<dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>4.12</version>
+  <version>4.2.4</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -35,7 +27,7 @@ If you want to product reports which is described in the section **Report** you 
 <dependency>
   <groupId>net.masterthought</groupId>
   <artifactId>cucumber-reporting</artifactId>
-  <version>3.5.1</version>
+  <version>4.4.0</version>
   <scope>provided</scope>
 </dependency>
 ```
@@ -53,7 +45,7 @@ The Maven plugin *Failsave* is used for processing the tests, therefore the Sure
 </plugin>
 ```
 
-The Failsave plugin is executed in the phase *verifiy*. All tests which ends with the suffix *AcceptanceTests* will
+The Failsave plugin is executed in the phase *test*. All tests which ends with the suffix *AcceptanceTests* will
 be executed.
 
 ```
@@ -69,16 +61,9 @@ be executed.
   <executions>
     <execution>
       <id>integration-test</id>
-      <phase>integration-test</phase>
+      <phase>test</phase>
       <goals>
         <goal>integration-test</goal>
-      </goals>
-    </execution>
-    <execution>
-      <id>verify</id>
-      <phase>verify</phase>
-      <goals>
-        <goal>verify</goal>
       </goals>
     </execution>
   </executions>
@@ -131,7 +116,7 @@ You can used it by adding the plugin to the build tag in the `pom.xml` file.
 <plugin>
   <groupId>net.masterthought</groupId>
   <artifactId>maven-cucumber-reporting</artifactId>
-  <version>3.5.0</version>
+  <version>4.4.0</version>
   <executions>
     <execution>
       <id>execution</id>
@@ -141,8 +126,10 @@ You can used it by adding the plugin to the build tag in the `pom.xml` file.
       </goals>
       <configuration>
         <projectName>cucumber</projectName>
-        <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
-        <cucumberOutput>${project.build.directory}/cucumber-report.json</cucumberOutput>
+        <outputDirectory>${project.build.directory}/</outputDirectory>
+        <jsonFiles>
+          <param>**/*.json</param>
+        </jsonFiles>
       </configuration>
     </execution>
   </executions>

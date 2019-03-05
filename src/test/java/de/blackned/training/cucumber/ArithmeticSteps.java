@@ -21,17 +21,17 @@ public class ArithmeticSteps {
     }
 
     @When("^I add ([-]{0,1}\\d+) and ([-]{0,1}\\d+)$")
-    public void i_add_and(int arg1, int arg2) throws Throwable {
+    public void i_add_and(int arg1, int arg2) {
         lastResult = arithmetic.add(arg1, arg2);
     }
 
     @Then("^the result is ([-]{0,1}\\d+)$")
-    public void the_result_is(int arg1) throws Throwable {
+    public void the_result_is(int arg1) {
         Assert.assertEquals(lastResult, arg1);
     }
 
     @Then("^the sum is ([-]{0,1}\\d+)$")
-    public void the_sum_is(int arg1) throws Throwable {
+    public void the_sum_is(int arg1) {
         the_result_is(arg1);
     }
 }
