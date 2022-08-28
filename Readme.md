@@ -1,6 +1,6 @@
 # Cucumber with JUnit
 
-[![Build Status](https://api.travis-ci.org/mflingelli/cucumber-junit.svg)](https://travis-ci.org/mflingelli/cucumber-junit)
+![Build-Status](https://github.com/mflingelli/cucumber-junit/actions/workflows/ci.yml/badge.svg)
 
 
 ## IDE
